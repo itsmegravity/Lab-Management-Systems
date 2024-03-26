@@ -13,7 +13,7 @@ def hello_world(request):
 
 @api_view(['GET'])
 def homepage(request):
-    return Response({})
+    return Response({'message': 'Homepage'})
 
 
 
