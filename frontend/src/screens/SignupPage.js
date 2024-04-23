@@ -1,24 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Typography, TextField, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
-const Loginpage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const [allEntry, setAllEntry] = useState([]);
-
-  const submitform = () => {
-    const newEntry = { email: email, password: password };
-
-    setAllEntry([...allEntry, newEntry]);
-    console.log(allEntry);
-  };
-  const navigate = useNavigate();
-
+const SignupPage = () => {
   return (
     <>
-      <form action="" onSubmit={submitform}>
+      <form action="">
         <div>
           <Box
             display="flex"
@@ -34,41 +20,45 @@ const Loginpage = () => {
             boxShadow={"5px 5px 10px #ccc"}
           >
             <Typography variant="h4" padding={3} textAlign={"center"}>
-              Login
+              Sign up
             </Typography>
-            <Typography variant="h9" textAlign={"center"}>
-              Stay updated on Lab Management System
-            </Typography>
+
+            <TextField
+              type="First Name"
+              variant="outlined"
+              placeholder="First Name"
+              margin="normal"
+            />
+            <TextField
+              type="Last Name"
+              variant="outlined"
+              placeholder="Last Name"
+              margin="normal"
+            />
             <TextField
               type="Email"
               variant="outlined"
               placeholder="Email"
               margin="normal"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               type="Password"
               variant="outlined"
               placeholder="Password"
               margin="normal"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
             />
-            <Button>Forgot Password?</Button>
             <Button
               variant="contained"
               color="info"
               sx={{ borderRadius: 3 }}
-              onClick={() => navigate("/Navbar")}
-              type="submit"
+              type="Submit"
             >
-              Login
+              Get Started
             </Button>
             <Typography variant="h9" marginTop={2} textAlign={"center"}>
-              New to Lab Management System?
+              Aleady have an account?
             </Typography>
-            <Button sx={{ borderRadius: 3 }}>Join now</Button>
+            <Button sx={{ borderRadius: 3 }}>Login</Button>
           </Box>
         </div>
       </form>
@@ -76,4 +66,4 @@ const Loginpage = () => {
   );
 };
 
-export default Loginpage;
+export default SignupPage;

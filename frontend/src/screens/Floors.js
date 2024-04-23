@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Grid, styled, Paper, Button } from "@mui/material";
 
+const Stack = () => {
+  const [clicked, setClicked] = useState([false]);
+
+  const handleClick = (index) => {
+    const updatedClicked = [...clicked];
+    updatedClicked[index] = !updatedClicked[index];
+    setClicked(updatedClicked);
+  };
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,

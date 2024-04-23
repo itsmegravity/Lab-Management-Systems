@@ -1,43 +1,32 @@
 import { createBrowserRouter } from "react-router-dom";
-
+//import Homepage from "../screens/Homepage";
 import HelloWorld from "../screens/HelloWorld";
-import Loginpage from "../screens/Loginpage";
-import Signup from "../screens/Signup";
-import Lab from "../screens/Lab";
-import FloorPlan from "../screens/FloorPlan";
+import LoginPage from "../screens/LoginPage";
+import SignupPage from "../screens/SignupPage";
+import Navbar from "../screens/Navbar";
 import Floors from "../screens/Floors";
-import Trial from "../screens/Trial";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Loginpage />,
+    element: <LoginPage />,
   },
   {
     path: "/hello-world",
-    element: <HelloWorld />, 
+    element: <HelloWorld />,
   },
   {
-    path: "/Signup",
-    element: <Signup />,
+    path: "/SignupPage",
+    element: <SignupPage />,
   },
   {
-    path: "/Lab",
-    element: <Lab />, 
-  },
-  {
-    path: "/Floorplan",
-    element: <FloorPlan />, 
+    path: "/Navbar",
+    element: <Navbar />,
   },
   {
     path: "/Floors",
-    element: <Floors />, 
-  },
-  {
-    path: "/Trial",
-    element: <Trial />, 
+    element: <Floors />,
   },
 ]);
-
 
 export default router;
