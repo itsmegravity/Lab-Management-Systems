@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ComputerSharpIcon from '@mui/icons-material/ComputerSharp';
-import Divider from '@mui/material/Divider';
 import Header from "../components/Header";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -34,7 +33,7 @@ export default function BasicGrid() {
     <>
     <Header/>
     <Box
-      height={500}
+      height={600}
       width={1150}
       my={4}
       display="flex"
@@ -75,10 +74,28 @@ export default function BasicGrid() {
           <ComputerSharpIcon fontSize={'50px'}>xs=5</ComputerSharpIcon>
         </Grid>
       </Grid>
+      <Box
+      height={"1px"}
+      width={800}
+      my={4}
+      margin={10}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      backgroundColor="#808080"
+      p={2}
+      sx={{
+        border: "2px solid grey",
+        backgroundColor: "#ECFFDC",
+        position: 'relative',
+        // Adjust the left padding to shift icons to the right
+        paddingLeft: '100px', // Adjust this value as needed
+      }}
+    >
+      </Box>
 
-      <Divider orientation="horizontal" variant="fullWidth" flexItem />
       {/* Bottom Grid */}
-      <Grid container spacing={5} fontSize={'90px'} columnGap={{ xs: 4, sm: 4, md: 4 }} margin={23} >
+      <Grid container spacing={5} fontSize={'90px'} columnGap={{ xs: 4, sm: 4, md: 4 }} margin={5} >
         <Grid item xs={0}>
           <ComputerSharpIcon fontSize={'50px'} style={{ transform: 'rotate(180deg)' }}>xs=5</ComputerSharpIcon>
         </Grid>

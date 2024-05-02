@@ -76,8 +76,27 @@ export default function BasicGrid() {
           </Grid>
         </Grid>
 
+        <Box
+      height={"1px"}
+      width={800}
+      my={4}
+      margin={10}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      backgroundColor="#808080"
+      p={2}
+      sx={{
+        border: "2px solid grey",
+        backgroundColor: "#ECFFDC",
+        position: 'relative',
+        // Adjust the left padding to shift icons to the right
+        paddingLeft: '100px', // Adjust this value as needed
+      }}
+    >
+        </Box>
         {/* Bottom Grid */}
-        <Grid container spacing={5} fontSize={'90px'} columnGap={{ xs: 4, sm: 4, md: 4 }} margin={23} >
+        <Grid container spacing={5} fontSize={'90px'} columnGap={{ xs: 4, sm: 4, md: 4 }} margin={5} >
           <Grid item xs={0}>
             <ComputerSharpIcon fontSize={'50px'} style={{ transform: 'rotate(180deg)' }}>xs=5</ComputerSharpIcon>
           </Grid>
