@@ -5,9 +5,13 @@ import LoginPage from "../screens/LoginPage";
 import SignupPage from "../screens/SignupPage";
 import Navbar from "../screens/Navbar";
 import Floors from "../screens/Floors";
-import Nayahai from "../screens/Nayahai";
 import Stairs from "../screens/Stairs";
-import Aurek from "../screens/Aurek";
+import Requirements from "../screens/Requirements";
+import Labtwo from "../screens/Labtwo";
+import Labone from "../screens/Labone";
+import Labthree from "../screens/Labthree";
+
+
 
 const router = createBrowserRouter([
   {
@@ -31,17 +35,26 @@ const router = createBrowserRouter([
     element: <Floors />,
   },
   {
-    path: "/Nayahai",
-    element: <Nayahai />,
-  },
-  {
     path: "/Stairs",
     element: <Stairs />,
   },
   {
-    path: "/Aurek",
-    element: <Aurek />,
+    path: "/Requirements",
+    element: <Requirements />,
   },
+  {
+    path: "/Labone",
+    element: <Labone />,
+  },
+  {
+    path: "/Labtwo",
+    element: <Labtwo/>,
+  },
+  {
+    path: "/Labthree",
+    element: <Labthree/>,
+  },
+  
 ]);
 
 export default router;
