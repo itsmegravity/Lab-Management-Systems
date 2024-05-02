@@ -1,14 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Grid, styled, Paper, Button } from "@mui/material";
 
-const Stack = () => {
-  const [clicked, setClicked] = useState([false]);
-
-  const handleClick = (index) => {
-    const updatedClicked = [...clicked];
-    updatedClicked[index] = !updatedClicked[index];
-    setClicked(updatedClicked);
-  };
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -33,7 +25,7 @@ export default function Floors() {
       p={2}
       sx={{ border: "2px solid grey", backgroundColor: "#ECFFDC" }}
     >
-      <Grid container columnSpacing={{ xs: 10, sm: 0, md: 0 }}>
+      <Grid container columnSpacing={{ xs: 0, sm: 0, md: 0  }} rowSpacing={0}>
         {/* Top section */}
         <Grid item xs={2}>
           <Button fullWidth>
@@ -123,7 +115,7 @@ export default function Floors() {
 
       <Grid
         container
-        columnSpacing={{ xs: 10, sm: 0, md: 0 }}
+        columnSpacing={{ xs: 0, sm: 0, md: 0 }}
         my={27}
         sx={{ marginTop: 23 }}
       >

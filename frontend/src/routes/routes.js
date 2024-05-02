@@ -5,6 +5,9 @@ import LoginPage from "../screens/LoginPage";
 import SignupPage from "../screens/SignupPage";
 import Navbar from "../screens/Navbar";
 import Floors from "../screens/Floors";
+import Nayahai from "../screens/Nayahai";
+import Stairs from "../screens/Stairs";
+import Aurek from "../screens/Aurek";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,18 @@ const router = createBrowserRouter([
   {
     path: "/Floors",
     element: <Floors />,
+  },
+  {
+    path: "/Nayahai",
+    element: <Nayahai />,
+  },
+  {
+    path: "/Stairs",
+    element: <Stairs />,
+  },
+  {
+    path: "/Aurek",
+    element: <Aurek />,
   },
 ]);
 
