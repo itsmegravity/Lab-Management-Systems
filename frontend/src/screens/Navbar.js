@@ -16,6 +16,7 @@ import {
   DialogContentText,
   DialogTitle,
   Tabs,
+  Button,
   Tab,
 } from "@mui/material";
 import HiveIcon from "@mui/icons-material/Hive";
@@ -51,6 +52,7 @@ export default function AccountMenu() {
     setLogoutDialogOpen(false);
   };
   const navigate = useNavigate();
+
   const handleProfileClick = () => {
     // Navigate to the profile page
     navigate("/Profile");
@@ -61,6 +63,105 @@ export default function AccountMenu() {
 
   return (
     <div>
+      <img
+        src="./images/LabImage.png"
+        alt=""
+        style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
+      />
+      <Typography
+        sx={{
+          fontFamily: "Poppins, sans-serif",
+          WebkitTextStroke: "1px #FFA41B",
+          WebkitTextFillColor: "#ffffff",
+          fontSize: "2.1rem", // Increased font size
+          fontWeight: 600, // Bold font weight
+          letterSpacing: "1px",
+          position: "absolute",
+          top: "30%", // Adjusted top position
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          textAlign: "center",
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Add text shadow
+        }}
+      >
+        <span>Welcome to our Lab Management System</span>. <br />
+        <span>Streamline your lab's workflow with ease!</span>
+      </Typography>
+
+      <Typography
+        sx={{
+          fontFamily: "Poppins, sans-serif",
+          color: "#d96459",
+          WebkitTextStroke: "1px #674d3c",
+          WebkitTextFillColor: "#d96469",
+
+          fontSize: "2.5rem",
+          fontWeight: 600,
+          letterSpacing: "1px",
+          marginTop: "30rem", // Adjusted top margin
+          textAlign: "center",
+        }}
+      >
+        Check available labs
+      </Typography>
+
+      <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}
+      >
+        <Button
+          style={{
+            padding: "0.5rem 1rem",
+            marginRight: "10rem",
+            fontSize: "1.5rem",
+            fontWeight: 600,
+            letterSpacing: "1px",
+            backgroundColor: "#87bdd8",
+            color: "black",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+          onClick={() => navigate("/Firstfloor")}
+        >
+          First Floor
+        </Button>
+
+        <Button
+          style={{
+            padding: "0.5rem 1rem",
+            marginRight: "10rem",
+            fontSize: "1.5rem",
+            fontWeight: 600,
+            letterSpacing: "1px",
+            backgroundColor: "#87bdd8",
+            color: "black",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+          onClick={() => navigate("/Secondfloor")}
+        >
+          Second Floor
+        </Button>
+
+        <Button
+          style={{
+            padding: "0.5rem 1rem",
+            fontSize: "1.5rem",
+            fontWeight: 600,
+            letterSpacing: "1px",
+            backgroundColor: "#87bdd8",
+            color: "black",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+          onClick={() => navigate("/Thirdfloor")}
+        >
+          Third Floor
+        </Button>
+      </div>
+
       <AppBar sx={{ background: "#063970", zIndex: 100 }}>
         {/* Your AppBar content here */}
       </AppBar>
